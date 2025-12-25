@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --btn-primary-900: rgba(0, 0, 0);
+  --btn-primary-800: rgba(0, 0, 0, 0.9);
+  --btn-primary-700: rgba(0, 0, 0, 0.8);
+  --color-white: rgba(255, 255, 255);
+}
+
+@layer components {
+  .btn-primary {
+    border-radius: 4px;
+    background-color: var(--btn-primary-900);
+    padding-inline: 8px;
+    padding-block: 3px;
+    font-weight: 600;
+    color: var(--color-white);
+    cursor: pointer;
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--btn-primary-700);
+      }
+    }
+  }
+}
